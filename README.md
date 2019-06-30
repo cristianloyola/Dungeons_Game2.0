@@ -11,8 +11,8 @@ Debido a que existen múltiples aplicaciones las cuales, o solo muestran conteni
 
 [6]: http://www.github.com/cristianloyola
 
-Aplicacion especializada y configurable de juegos
-Noticias, Imagenes, Videos, Reseñas y más...
+Aplicacion especializada y configurable de Cuentas de juegos
+ y más...
 
 
 ![imagen intro](https://github.com/cristianloyola/Dungeons_Game/blob/master/introD_G.png)
