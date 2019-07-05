@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title (click)='presentActionSheet()'>
+        + Info
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+        <ion-img src="https://media.giphy.com/media/3ohhwMlj784k3GufHa/giphy.gif"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>SMCL Informacion</ion-card-subtitle>
+          <ion-card-title>Bienvenido a "Dungeon's Games 2.0"</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Aplicacion especializada y configurable de juegos.</p>
+          <p>Imagenes, Videos, Reseñas y más...</p>
+          <p>Puedes Registrar todas tus Cuentas:</p>
+          <p>Battle.net.</p>
+          <p>Bungie</p>
+          <p>League of Legends</p>
+          <p>Netflix</p>
+          <p>Spotify</p>
+          <p>Para todas las plataformas sin publicidad!!! solo pagando una vez para siempre!!!</p>
+          <p>Buscanos en Play Store...</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-button (click)='cerrar()'>cerrar</ion-button>
+</ion-content>

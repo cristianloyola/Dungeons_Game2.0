@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title (click)='presentActionSheet()'>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="https://media.giphy.com/media/W2t2vdTS3SZ0c/giphy.gif"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>SMCL Inicio</ion-card-subtitle>
+        <ion-card-title>Bienvenido a "Dungeon's Games 2.0"</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Aplicacion especializada y configurable de juegos.</p>
+        <p>Cuentas, Imagenes, Documentos y más...<button ion-button clear item-end (click)='info()'>+ Info</button></p>
+        <ion-grid>
+            <ion-row>
+              <ion-col align-self-center>Cuentas</ion-col>
+              <ion-grid align-self-end><ion-radio color="success" name="pc"  value="pc" (click)="datos()"  align-self-end></ion-radio></ion-grid><ion-col size="0.5"></ion-col>
+              <ion-col align-self-center>Archivos</ion-col>
+              <ion-grid align-self-end><ion-radio color="success" name="arch"  value="arch" (click)="archivos()"  align-self-end></ion-radio></ion-grid><ion-col size="0.5"></ion-col>
+              <ion-col align-self-center>Crear Usuarios</ion-col>
+              <ion-grid align-self-end><ion-radio color="success" name="usr"  value="usr" (click)="registrar()"  align-self-end></ion-radio></ion-grid><ion-col size="0.5"></ion-col>
+              <ion-col  align-self-end>Acerca de</ion-col>
+              <ion-radio color="success" name="   ps4"  value="ps4" (click)="ps4()" align-self-end></ion-radio></ion-row></ion-grid>
+      </ion-card-content>
+    </ion-card>
+   
+</ion-content>

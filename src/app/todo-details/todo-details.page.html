@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngIf="cuenta">
+        <ion-label position="floating" color="primary">Plataforma</ion-label>
+      <ion-input required type="text" position="floating" [(ngModel)]="cuenta.Plataforma"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="cuenta">
+        <ion-label position="floating" color="primary">Usuario</ion-label>
+      <ion-input required type="text" [(ngModel)]="cuenta.Usuario"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="cuenta">
+        <ion-label position="floating" color="primary">Login</ion-label>
+      <ion-input required type="text" [(ngModel)]="cuenta.Login"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="cuenta">
+        <ion-label position="floating" color="primary">Contraseña</ion-label>
+      <ion-input required type="text" [(ngModel)]="cuenta.Contrasena"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveCuenta()">Guardar</ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+      <ion-fab-button color="danger" (click)="onRemoveCuenta(cuentaId)" routerLink="home" routerDirection="forward">
+          <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

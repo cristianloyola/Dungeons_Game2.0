@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start"><ion-icon name="arrow-round-back" (click)=volverInicio()></ion-icon></ion-buttons>
+    <ion-buttons slot="end">
+       
+      <ion-button [routerLink]="['/new-task']">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-title (click)='presentActionSheet()'>Archivos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="items" class="list-mini-content" padding>
+  <div *ngIf="items.length > 0" class="list-mini">
+    <ion-list>
+      <ion-item *ngFor="let item of items" [routerLink]="['/details', item.payload.doc.id]">
+        <ion-thumbnail slot="start">
+          <img [src]="item.payload.doc.data().image">
+        </ion-thumbnail>
+        <ion-label>{{item.payload.doc.data().title}}</ion-label>
+        <ion-button fill="clear" slot="end">Detalles</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="items.length == 0" class="empty-list">
+    Crea tu primera Foto.
+  </div>
+  <ion-item>
+    <ion-label>Actualizar Archivos</ion-label>
+      <ion-toggle
+      color="success" (click)="test()"></ion-toggle>
+  </ion-item>
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="medium">
+    <ion-title>Salir</ion-title>
+  </ion-toolbar>
+</ion-footer>
