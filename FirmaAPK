@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore hackerius.keystore -alias hackerius -keyalg RSA -keysize 2048 -validity 10000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore hackerius2.keystore app-release-unsigned.apk hackerius2
+
+zipalign -v 4 app-release-unsigned.apk DG_EPE3.apk
