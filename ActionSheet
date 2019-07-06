@@ -1,0 +1,59 @@
+async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Sitio',
+      buttons: [{
+        text: 'Inicio',
+        icon: 'trash',
+        handler: () => {
+          this.navcontroller.navigateBack('tab1');
+          console.log();
+        }
+      }, {
+        text: 'Noticias',
+        icon: 'share',
+        handler: () => {
+          console.log();
+          this.navcontroller.navigateBack('tab2');
+        }
+      }, {
+        text: 'PC',
+        icon: 'laptop',
+        handler: () => {
+          console.log();
+          this.navcontroller.navigateBack('tab3');
+        }
+      }, {
+        text: 'XBox',
+        icon: 'logo-xbox',
+        handler: () => {
+          console.log();
+          this.navcontroller.navigateBack('tabs4');
+        }
+      }, {
+        text: 'PS4',
+        icon: 'logo-playstation',
+        handler: () => {
+          console.log();
+          this.navcontroller.navigateBack('tabs5');
+        }
+      }, {
+        text: 'PSVita',
+        icon: 'git-branch',
+        handler: () => {
+          console.log();
+          this.navcontroller.navigateBack('tabs6');
+        }
+      },
+      
+      
+      {
+        text: 'Cancelar',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
+  }
